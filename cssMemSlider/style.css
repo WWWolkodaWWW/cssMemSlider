@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: 'Amatic SC', cursive;
+	height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+	color: #3399CC;
+	letter-spacing: 0.05em;
+	font-size: 4rem;
+}
+
+.slider {
+	width: 500px;
+	overflow: hidden;
+}
+
+.slider__image_container {
+	height: 500px;
+	display: flex;
+	width: 2000px;
+}
+
+.slider__text_container {
+
+}
+
+.slide {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.slide_1 {
+	background-image: url(./assets/M51.jpg);
+}
+
+.slide_2 {
+	background-image: url(./assets/M63.jpg);
+}
+
+.slide_3 {
+	background-image: url(./assets/M64.jpg);
+}
+
+.slide_4 {
+	background-image: url(./assets/NGC6946.jpg);
+}
