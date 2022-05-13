@@ -18,12 +18,16 @@ body {
 h1 {
 	color: #3399CC;
 	letter-spacing: 0.05em;
-	font-size: 4rem;
+	font-size: 5rem;
+	text-align: center;
 }
 
 .slider {
 	width: 500px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	row-gap: 3rem;
 }
 
 .slider__image_container {
@@ -33,13 +37,23 @@ h1 {
 }
 
 .slider__text_container {
+	display: flex;
+	width: calc(100% * 4);
+	height: 100%;
+}
 
+.text_title {
+	font-size: 2.3rem;
+	display: inline-block;
+	width: 500px;
+	height: 100%;
 }
 
 .slide {
 	display: block;
 	width: 100%;
 	height: 100%;
+	background-repeat: no-repeat;
 
 }
 
@@ -58,3 +72,5 @@ h1 {
 .slide_4 {
 	background-image: url(./assets/NGC6946.jpg);
 }
+
+
