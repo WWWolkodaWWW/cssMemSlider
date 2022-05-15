@@ -1,3 +1,10 @@
+:root {
+	--bg-color-light: #163544; 
+	--bg-color-dark: #113140;
+	--color-primary: #3399CC;
+	--color-additional: #ffffff;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,16 +17,16 @@ html {
 body {
 	font-family: 'Amatic SC', cursive;
 	height: 100vh;
-	background-color: #163544;
+	background-color: var(--bg-color-light);
 }
 
 .wrapper {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-	background-color: #113140;
+	background-color: var(--bg-color-dark);
 	padding: 2rem 1rem;
 	border-top-right-radius: 4.5rem;
     border-bottom-left-radius: 4.5rem;
@@ -27,7 +34,7 @@ body {
 }
 
 h1 {
-	color: #3399CC;
+	color: var(--color-primary);
 	letter-spacing: 0.05em;
 	font-size: 5rem;
 	text-align: center;
@@ -35,7 +42,7 @@ h1 {
 }
 
 strong {
-	color: #3399CC;
+	color: var(--color-primary);
 	letter-spacing: 0.05em;
 }
 
@@ -83,7 +90,7 @@ input {
 	font-size: 2.3rem;
 	width: 100%;
 	height: 100%;
-	color: #ffffff;
+	color: var(--color-additional);
 }
 
 .slide {
@@ -108,29 +115,33 @@ input {
 	width: 1rem;
 	height: 1rem;
 	border-radius: 50%;
-	border: 2px solid #3399CC;
+	border: 2px solid var(--color-primary);
 	transition: all 0.5s ease-out;
 }
 
 .slider__pagination label:hover > .pagination_circle {
-	border: 2px solid #ffffff;
-	background-color: #ffffff;
+	border: 2px solid var(--color-additional);
+}
+
+.slider__pagination label:active > .pagination_circle {
+	border: 2px solid var(--color-additional);
+	background-color: var(--color-additional);
 }
 
 #btn1:checked ~ .slider__description_container > .slider__pagination > .btn_1 > .pagination_circle {
-	background-color: #3399CC;
+	background-color: var(--color-primary);
 }
 
 #btn2:checked ~ .slider__description_container > .slider__pagination > .btn_2 > .pagination_circle {
-	background-color: #3399CC;
+	background-color: var(--color-primary);
 }
 
 #btn3:checked ~ .slider__description_container > .slider__pagination > .btn_3 > .pagination_circle {
-	background-color: #3399CC;
+	background-color: var(--color-primary);
 }
 
 #btn4:checked ~ .slider__description_container > .slider__pagination > .btn_4 > .pagination_circle {
-	background-color: #3399CC;
+	background-color: var(--color-primary);
 }
 
 #btn1:checked ~ .slider__description_container > .slider__text,
@@ -173,7 +184,12 @@ input {
 	background-image: url(./assets/NGC6946.jpg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
+	.wrapper {
+		min-height: 600px;
+		border-top-right-radius: 2rem;
+		border-bottom-left-radius: 2rem;
+	}
 	.slider__description_container {
 		display: flex;
 		flex-direction: column-reverse;
@@ -184,3 +200,17 @@ input {
 		justify-content: center;
 	}
 }
+
+@media screen and (max-width: 412px) {
+	.wrapper {
+		min-height: 500px;
+	}
+	.slider__image_container {
+		height: 450px;
+	}
+
+	.slider {
+		row-gap: 0;
+	}
+}
+
